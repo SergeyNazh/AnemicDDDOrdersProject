@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "SqlServer": "Server=DESKTOP-KBCNFJ2;Database=OrdersDb;User=sa;Password=8800;Encrypt=false;"
+  }
+}
