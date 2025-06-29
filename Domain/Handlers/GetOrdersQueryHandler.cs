@@ -20,6 +20,10 @@ namespace Domain.Handlers
         public async Task<Result<IReadOnlyCollection<Order>>> Handle(GetOrdersQuery request, CancellationToken cancellationToken)
         {
             Result validationResult = await _validator.Validate(request);
+            if (!validationResult.IsSuccess)
+            {
+                return Result<IReadOnlyCollection<Order>>.Failure(validationResult.ErrorMessage);
+            }
             IQueryable<Order> ordersQuery = _databaseContext.Orders
                 .AsNoTracking();
             if (request.LoadItems == true)
