@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shared.Validation
+﻿namespace Shared.Validation
 {
     public class ValidationContext
     {
@@ -16,7 +10,7 @@ namespace Shared.Validation
         }
     }
     public class ValidationContext<TData> : ValidationContext
-        where TData : new ()
+        where TData : new()
     {
         public TData Data { get; } = new TData();
     }

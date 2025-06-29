@@ -1,5 +1,4 @@
-﻿using Domain.Dtos.GetOrders;
-using Domain.Entities;
+﻿using Domain.Entities;
 using MediatR;
 using Shared;
 
